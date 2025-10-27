@@ -3,7 +3,7 @@ import numpy as np
 import os
 import sys
 
-CP = 1.004 * 10**-3   #Specific heat of air at constant pressure (C_p)in MJ/(kg K)
+CP = 1.004 * 10**-3   # Specific heat of air at constant pressure (C_p)in MJ/(kg K)
 LV = 2.45             # Latent Heat of Vaporization for Water.  FAO uses constant 2.45 MJ/kg
 
 # FAO56 Constants 
@@ -103,7 +103,7 @@ def get_rnet(path_dict,variable_dict,rnet_calculated=False,units='W/m2'):
     return rnet
 
 def PenMon(path_dict = None,variable_dict=None,veg_type='grass',rnet_calculated = True,rh_from_tdew=False,wind_meas_height=10,const_wind = 1.0,rnet_units='W/m2',latname='lat',lonname='lon'):
-        '''Calculate FAO56 Penman Monteith  reference (potential) evapotranspiration for the given dictionary of input files'''
+    '''Calculate FAO56 Penman Monteith  reference (potential) evapotranspiration for the given dictionary of input files'''
 #
 # rnet_calculated = True(default) if rnet-G is calculated from SH + LH using the Surface Energy Balance
 # veg_type=alfalfa, grass (default) 
@@ -113,7 +113,7 @@ def PenMon(path_dict = None,variable_dict=None,veg_type='grass',rnet_calculated 
 
 
     # look up some variable names in the variable dictionary
-
+    
     temp_varname = str(variable_dict['temp'])  
     rh_varname   = str(variable_dict['rh'])
     rnet_varname = str(variable_dict['rnet'])
